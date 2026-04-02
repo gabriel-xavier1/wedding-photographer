@@ -1,0 +1,15 @@
+original_about = '<div id="about" data-bid="about" class="sb sib-about sb-ps" style="height: 732.09px;"><div class="ss-s ss-bg"><div class="sc" style="width: 1061px;"><a href="/about" target="_self" class="sie-about_0 se" data-sid="about_0" style="transform: scale(0.884167, 0.884167) translate(-104.283px, -100.287px);"><span type="button" aria-label="get to know me" class="se-button st-primary" data-link="{&quot;type&quot;:&quot;page&quot;,&quot;target&quot;:&quot;about&quot;}"><span class="st-m-primary st-d-primary">get to know me</span></span></a><div data-sid="about_1" class="sie-about_1 se" style="transform: scale(0.884167, 0.884167) translate(-121.969px, -80.1117px);"><p class="se-t sie-about_1-text st-m-paragraph st-d-paragraph se-rc">Based wherever the next trail leads, I specialize in intimate, atmospheric storytelling for couples who choose adventure over expectation.<br><br>From windswept cliffs to moss-covered forests, from the vast calm of the desert to alpine lakes at dawn \u2014 every location becomes part of your story.<br>I\u2019ll help you feel grounded, present, and fully yourselves, so your photos breathe with the truth of who you are.<br></p></div><div data-sid="about_2" class="sie-about_2 se" style="transform: scale(0.884167, 0.884167) translate(-33.2762px, -27.9048px);"><p class="se-t sie-about_2-text st-m-heading st-d-heading se-rc">MEET YOUR PHOTOGRAPHER,<br></p></div><div data-sid="about_3" class="sie-about_3 se" style="transform: scale(0.884167, 0.884167) translate(-41.7262px, -75.7229px);"><div style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;" data-img="about_3" class="se-img se-gr slzy" data-src="//static.showit.co/1200/rrCs5PsGvZ-lALVbMzbPSA/135701/sandra-seitamaa-6a23hx3xkdo-unsplash.jpg"></div><noscript><img src="//static.showit.co/800/rrCs5PsGvZ-lALVbMzbPSA/135701/sandra-seitamaa-6a23hx3xkdo-unsplash.jpg" class="se-img" alt="" title="sandra-seitamaa-6a23HX3Xkdo-unsplash"/></noscript></div><div data-sid="about_4" class="sie-about_4 se" style="transform: scale(0.884167, 0.884167) translate(-107.361px, -36.2238px);"><div style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;" data-img="about_4" class="se-img se-gr slzy" data-src="//static.showit.co/400/OuJ9EdyGER0-wwVCOSxA_A/135701/sandra-seitamaa-jxkefdlseg4-unsplash.jpg"></div><noscript><img src="//static.showit.co/400/OuJ9EdyGER0-wwVCOSxA_A/135701/sandra-seitamaa-jxkefdlseg4-unsplash.jpg" class="se-img" alt="" title="sandra-seitamaa-JxKEFDLsEG4-unsplash"/></noscript></div><div data-sid="about_5" class="sie-about_5 se" style="transform: scale(0.884167, 0.884167) translate(-33.2762px, -39.6956px);"><p class="se-t sie-about_5-text st-m-title st-d-title se-rc">Willow.<br></p></div></div></div></div>'
+
+with open('index.html', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+start = content.find('id="about"')
+end = content.find('id="trusted-by"')
+
+if start == -1 or end == -1:
+    print('ERROR: markers not found')
+else:
+    restored = content[:start] + original_about + content[end:]
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(restored)
+    print('DONE')

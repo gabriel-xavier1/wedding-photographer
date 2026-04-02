@@ -1,0 +1,263 @@
+/**
+ * Layout moderno (Flexbox / Grid) sobre export Showit.
+ * Mantém position:absolute onde o motor/efeitos dependem (camadas, hero, galerias, overlays).
+ * Sobrescreve apenas blocos em que o fluxo pode substituir left/top com segurança.
+ */
+
+/* ---------- Barra inferior: copyright | links | voltar ao topo ---------- */
+html.d .sib-footer-bar .sc {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem 1.25rem;
+  padding: 0 24px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+html.d .sib-footer-bar .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  flex: 0 1 auto;
+  pointer-events: auto;
+}
+
+html.d .sib-footer-bar .sc .sie-footer-bar_0 {
+  flex: 0 1 auto;
+}
+
+html.d .sib-footer-bar .sc .sie-footer-bar_1 {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+html.d .sib-footer-bar .sc .sie-footer-bar_2 {
+  flex: 0 0 auto;
+}
+
+html.m .sib-footer-bar .sc {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+html.m .sib-footer-bar .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  max-width: 100%;
+  flex: 0 0 auto;
+  pointer-events: auto;
+}
+
+html.m .sib-footer-bar .sc .sie-footer-bar_1 {
+  margin-left: 0;
+  text-align: center;
+}
+
+/* ---------- Logos “Featured in” ---------- */
+html.d .sib-trusted-by .sc {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 2.5rem;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+html.d .sib-trusted-by .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  flex: 0 0 auto;
+}
+
+html.d .sib-trusted-by .sc .sie-trusted-by_5 {
+  flex-basis: 100%;
+  text-align: center;
+  order: -1;
+}
+
+html.m .sib-trusted-by .sc {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+html.m .sib-trusted-by .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  max-width: 100%;
+}
+
+html.m .sib-trusted-by .sc .sie-trusted-by_5 {
+  order: -1;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+/* ---------- Logo do header (grupo título + tagline) ---------- */
+html.d .sie-header_8.si-group,
+html.m .sie-header_8.si-group {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+html.d .sie-header_8 .se,
+html.m .sie-header_8 .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+}
+
+/* ---------- Marca no rodapé (Willow / photography) ---------- */
+html.d .sie-footer_13.si-group,
+html.m .sie-footer_13.si-group {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+html.d .sie-footer_13 .sie-footer_cF8teO4yW_1,
+html.m .sie-footer_13 .sie-footer_cF8teO4yW_1 {
+  order: -1;
+}
+
+html.d .sie-footer_13 .se,
+html.m .sie-footer_13 .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+}
+
+/* ---------- Botão hambúrguer: fundo + ícone na mesma célula (grid) ---------- */
+html.d .sie-hamburger-menu_0.si-group,
+html.m .sie-hamburger-menu_0.si-group {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+html.d .sie-hamburger-menu_DBz82OVM-_0,
+html.m .sie-hamburger-menu_DBz82OVM-_0 {
+  grid-area: 1 / 1;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html.d .sie-hamburger-menu_DBz82OVM-_1,
+html.m .sie-hamburger-menu_DBz82OVM-_1 {
+  grid-area: 1 / 1;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  height: auto !important;
+  justify-self: center;
+  align-self: center;
+}
+
+/* ---------- Setas do carrossel de depoimentos ---------- */
+html.d .sie-testimonials_2.si-group,
+html.d .sie-testimonials_3.si-group,
+html.m .sie-testimonials_2.si-group,
+html.m .sie-testimonials_3.si-group {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+html.d .sie-testimonials_2 .se,
+html.d .sie-testimonials_3 .se,
+html.m .sie-testimonials_2 .se,
+html.m .sie-testimonials_3 .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+/* ---------- Formulário do pop-up (nome → email → CTA): ordem visual correta ---------- */
+html.d .sie-pop-up_5.si-group,
+html.m .sie-pop-up_5.si-group {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+html.d .sie-pop-up_5 .se,
+html.m .sie-pop-up_5 .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+}
+
+html.d .sie-pop-up_xxS785i8W_4 {
+  order: 1;
+}
+
+html.d .sie-pop-up_xxS785i8W_3 {
+  order: 2;
+}
+
+html.d .sie-pop-up_xxS785i8W_2 {
+  order: 3;
+}
+
+html.d .sie-pop-up_xxS785i8W_1 {
+  order: 4;
+}
+
+html.d .sie-pop-up_xxS785i8W_0 {
+  order: 5;
+}
+
+html.m .sie-pop-up_xxS785i8W_4 {
+  order: 1;
+}
+
+html.m .sie-pop-up_xxS785i8W_3 {
+  order: 2;
+}
+
+html.m .sie-pop-up_xxS785i8W_2 {
+  order: 3;
+}
+
+html.m .sie-pop-up_xxS785i8W_1 {
+  order: 4;
+}
+
+html.m .sie-pop-up_xxS785i8W_0 {
+  order: 5;
+}

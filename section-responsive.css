@@ -1,0 +1,419 @@
+/**
+ * About + Investments (freebie) + offers: layout fluido sem quebrar o motor Showit.
+ * Sobrescreve alturas fixas e posicionamento absoluto só nestes blocos.
+ */
+
+/* ---------- Helpers: texto fluindo (deixa de depender de caixa com altura fixa) ---------- */
+.sib-about .se-t,
+.sib-freebie .se-t,
+html.m .sib-offers .se-t {
+  box-sizing: border-box;
+}
+
+/* =============================================================================
+   SEÇÃO ABOUT — desktop: 2 colunas (conteúdo | imagem); tablet/mobile: coluna única
+   Ordem visual: HI I AM → Jacque → texto → botão | foto à direita (desktop)
+   ============================================================================= */
+
+html.d .sib-about {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.d .sib-about .sc {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, min(540px, 42vw));
+  grid-template-rows: auto auto auto auto;
+  column-gap: clamp(28px, 4vw, 56px);
+  row-gap: clamp(8px, 1.5vw, 20px);
+  padding: clamp(36px, 5vw, 64px) clamp(20px, 4vw, 48px) clamp(48px, 6vw, 72px);
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: start;
+}
+
+/* Coluna esquerda: ordem lógica (DOM não coincide — usamos grid-area) */
+html.d .sib-about .sc .sie-about_2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+html.d .sib-about .sc .sie-about_5 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+html.d .sib-about .sc .sie-about_1 {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+}
+
+html.d .sib-about .sc .sie-about_0 {
+  grid-column: 1;
+  grid-row: 4;
+  align-self: start;
+}
+
+/* Foto — coluna 2, altura acompanha o bloco de texto */
+html.d .sib-about .sc .sie-about_3 {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: stretch;
+  justify-self: end;
+  width: 100% !important;
+  max-width: 540px;
+  min-height: 360px;
+  height: auto !important;
+}
+
+html.d .sib-about .sc .sie-about_3 .se-img {
+  min-height: 100%;
+}
+
+html.d .sib-about .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+html.d .sib-about .sc .sie-about_1 {
+  width: 100% !important;
+  max-width: 560px;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+html.d .sib-about .sc .sie-about_1 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+html.d .sib-about .sc .sie-about_2 .se-t,
+html.d .sib-about .sc .sie-about_5 .se-t,
+html.d .sib-about .sc .sie-about_0 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Tablet / desktop estreito: uma coluna, imagem primeiro */
+@media (max-width: 1100px) {
+  html.d .sib-about .sc {
+    grid-template-columns: 1fr !important;
+    padding: 32px 20px 48px;
+  }
+
+  html.d .sib-about .sc .sie-about_3 {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: center;
+    max-width: 420px;
+    min-height: 280px;
+    aspect-ratio: 3 / 4;
+  }
+
+  html.d .sib-about .sc .sie-about_2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  html.d .sib-about .sc .sie-about_5 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  html.d .sib-about .sc .sie-about_1 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  html.d .sib-about .sc .sie-about_0 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
+
+/* Mobile (classe .m) */
+html.m .sib-about {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.m .sib-about .sc {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  padding: 28px 16px 40px;
+  box-sizing: border-box !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+html.m .sib-about .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+html.m .sib-about .sc .sie-about_3 {
+  order: 1;
+  min-height: 220px;
+  aspect-ratio: 16 / 10;
+}
+
+html.m .sib-about .sc .sie-about_2 {
+  order: 2;
+}
+
+html.m .sib-about .sc .sie-about_5 {
+  order: 3;
+}
+
+html.m .sib-about .sc .sie-about_1 {
+  order: 4;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+html.m .sib-about .sc .sie-about_0 {
+  order: 5;
+}
+
+html.m .sib-about .sc .sie-about_1 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  white-space: normal !important;
+}
+
+/* =============================================================================
+   SEÇÃO INVESTMENTS (freebie) — imagem | texto + CTA
+   ============================================================================= */
+
+html.d .sib-freebie {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.d .sib-freebie .sc {
+  display: grid !important;
+  grid-template-columns: minmax(260px, min(440px, 38vw)) minmax(280px, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  column-gap: clamp(24px, 4vw, 48px);
+  row-gap: clamp(12px, 2vw, 20px);
+  padding: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 40px);
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: start;
+}
+
+html.d .sib-freebie .sc .sie-freebie_0 {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  align-self: stretch;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 420px;
+}
+
+html.d .sib-freebie .sc .sie-freebie_4 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+html.d .sib-freebie .sc .sie-freebie_3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+html.d .sib-freebie .sc .sie-freebie_2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+html.d .sib-freebie .sc .sie-freebie_1 {
+  grid-column: 2;
+  grid-row: 4;
+  justify-self: start;
+}
+
+html.d .sib-freebie .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+html.d .sib-freebie .sc .sie-freebie_2 {
+  width: 100% !important;
+  max-width: 600px;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.d .sib-freebie .sc .sie-freebie_2 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  white-space: normal !important;
+}
+
+html.d .sib-freebie .sc .sie-freebie_3 .se-t,
+html.d .sib-freebie .sc .sie-freebie_4 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 900px) {
+  html.d .sib-freebie .sc {
+    grid-template-columns: 1fr !important;
+  }
+
+  html.d .sib-freebie .sc .sie-freebie_0 {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    min-height: 260px;
+    max-height: 50vh;
+  }
+
+  html.d .sib-freebie .sc .sie-freebie_4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  html.d .sib-freebie .sc .sie-freebie_3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  html.d .sib-freebie .sc .sie-freebie_2 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  html.d .sib-freebie .sc .sie-freebie_1 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
+
+html.m .sib-freebie {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.m .sib-freebie .sc {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 24px 16px 40px;
+  box-sizing: border-box !important;
+  height: auto !important;
+}
+
+html.m .sib-freebie .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+}
+
+html.m .sib-freebie .sc .sie-freebie_0 {
+  order: 1;
+  min-height: 200px;
+  aspect-ratio: 4 / 3;
+}
+
+html.m .sib-freebie .sc .sie-freebie_4 {
+  order: 2;
+}
+
+html.m .sib-freebie .sc .sie-freebie_3 {
+  order: 3;
+}
+
+html.m .sib-freebie .sc .sie-freebie_2 {
+  order: 4;
+}
+
+html.m .sib-freebie .sc .sie-freebie_1 {
+  order: 5;
+}
+
+html.m .sib-freebie .sc .sie-freebie_2 .se-t {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  white-space: normal !important;
+}
+
+/* =============================================================================
+   OFFERS (conteúdo estilo “investimento” / pacotes) — altura fluida no mobile
+   ============================================================================= */
+
+html.m .sib-offers {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html.m .sib-offers .sc {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 24px 16px 56px;
+  box-sizing: border-box !important;
+  height: auto !important;
+}
+
+html.m .sib-offers .sc > .str-im,
+html.m .sib-offers .sc > .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+html.m .sib-offers .sc .str-im .se {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+html.m .sib-offers .sc .sie-offers_1,
+html.m .sib-offers .sc .sie-offers_2 {
+  min-height: 200px;
+}
