@@ -510,6 +510,56 @@
     #navbar-custom a.nav-link:hover { opacity: 0.7; }
     #navbar-custom a.nav-link.active { opacity: 0.7; }
 
+    /* ── RESPONSIVE ─────────────────────────────── */
+
+    /* TABLET (≤1024px) */
+    @media (max-width: 1024px) {
+      #navbar-custom .nav-inner { height: 80px; padding: 0 20px; }
+      #navbar-custom .nav-left, #navbar-custom .nav-right { gap: 24px; }
+      #navbar-custom a.nav-link { font-size: 11px; letter-spacing: 0.12em; }
+      #navbar-custom .nav-logo img { height: 56px; }
+
+      /* Collage - switch to grid */
+      #collage-intro > div:last-child { height: auto !important; }
+      #collage-intro > div:last-child > div { position: relative !important; left: auto !important; top: auto !important; width: 48% !important; height: 220px !important; display: inline-block; margin: 1%; }
+
+      /* Intro-custom - reduce fixed widths */
+      #intro-custom .intro-flex { gap: 20px; }
+      #intro-custom .intro-left { flex: 0 0 200px !important; height: 300px !important; }
+      #intro-custom .intro-right { flex: 0 0 180px !important; }
+    }
+
+    /* MOBILE (≤768px) */
+    @media (max-width: 768px) {
+      /* Navbar - hide links, show only logo */
+      #navbar-custom .nav-inner { height: 64px; padding: 0 16px; }
+      #navbar-custom .nav-left, #navbar-custom .nav-right { display: none; }
+      #navbar-custom .nav-logo { position: static; transform: none; margin: 0 auto; }
+      #navbar-custom .nav-logo img { height: 48px; }
+      #navbar-custom .nav-inner { justify-content: center; }
+
+      /* Collage - single column */
+      #collage-intro { padding: 48px 20px !important; }
+      #collage-intro > div:first-child { max-width: 600px; margin: 0 auto 32px; }
+      #collage-intro > div:last-child { height: auto !important; display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
+      #collage-intro > div:last-child > div { position: relative !important; left: auto !important; top: auto !important; width: 100% !important; height: 220px !important; }
+
+      /* Intro-custom - stack vertically */
+      #intro-custom { padding: 48px 20px !important; }
+      #intro-custom > div { max-width: 100% !important; }
+      #intro-custom > div > div[style*="display:flex"] { flex-direction: column !important; gap: 24px !important; }
+      #intro-custom > div > div > div[style*="flex:0 0 260px"] { flex: unset !important; width: 100% !important; height: 280px !important; }
+      #intro-custom > div > div > div[style*="flex:1"] { padding: 0 !important; }
+      #intro-custom > div > div > div[style*="flex:0 0 240px"] { flex: unset !important; width: 100% !important; flex-direction: row !important; }
+      #intro-custom > div > div > div[style*="flex:0 0 240px"] > div { flex: 1 !important; height: 180px !important; }
+
+      /* FAQ */
+      #faq-custom { padding: 48px 20px !important; }
+      #faq-custom > div { flex-direction: column !important; gap: 0 !important; }
+      #faq-custom > div > div[style*="flex:0 0 380px"] { flex: unset !important; width: 100% !important; border-right: none !important; border-bottom: 1px solid rgba(22,22,22,0.2) !important; padding: 40px 20px !important; }
+      #faq-custom > div > div:last-child { padding: 40px 20px !important; }
+    }
+
     /* Esconder o header ShowIt - usando navbar custom */
     #header { display: none !important; }
 
