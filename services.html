@@ -597,8 +597,16 @@
 
       /* FAQ */
       #faq-custom { padding: 48px 20px !important; }
-      #faq-custom > div { flex-direction: column !important; gap: 32px !important; }
-      #faq-custom > div > div { width: 100% !important; }
+      #faq-custom > div { flex-direction: column !important; gap: 0 !important; max-width: 100% !important; }
+      #faq-custom > div > div[style*="flex:0 0 380px"] {
+        flex: unset !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(22,22,22,0.15) !important;
+        padding: 32px 20px 40px !important;
+        text-align: center !important;
+      }
+      #faq-custom > div > div:last-child { padding: 40px 20px !important; width: 100% !important; }
     }
 
     /* Esconder o header ShowIt - usando navbar custom */
@@ -5362,6 +5370,9 @@
     .pkg-section--lover { padding:60px 24px; }
     .pkg-section--mine { padding:60px 24px; }
     .pkg-section--ours { padding:60px 24px; }
+    /* Add spacing between badge and title on mobile */
+    .pkg__header { gap: 16px !important; margin-bottom: 20px !important; }
+    .pkg-badge { width: 64px !important; height: 64px !important; font-size: 7px !important; }
   }
 </style>
 
