@@ -540,9 +540,25 @@
 
       /* Collage - single column */
       #collage-intro { padding: 48px 20px !important; }
-      #collage-intro > div:first-child { max-width: 600px; margin: 0 auto 32px; }
-      #collage-intro > div:last-child { height: auto !important; display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
-      #collage-intro > div:last-child > div { position: relative !important; left: auto !important; top: auto !important; width: 100% !important; height: 220px !important; }
+      #collage-intro > div:first-child { max-width: 100%; margin: 0 auto 32px; }
+      #collage-intro > div:first-child p { font-size: 17px !important; }
+      /* Collage grid - override absolute positioning */
+      #collage-intro > div:last-child {
+        position: relative !important;
+        height: auto !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+        max-width: 100% !important;
+      }
+      #collage-intro > div:last-child > div {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        height: 180px !important;
+      }
 
       /* Intro-custom - stack vertically */
       #intro-custom { padding: 48px 20px !important; }
@@ -555,9 +571,8 @@
 
       /* FAQ */
       #faq-custom { padding: 48px 20px !important; }
-      #faq-custom > div { flex-direction: column !important; gap: 0 !important; }
-      #faq-custom > div > div[style*="flex:0 0 380px"] { flex: unset !important; width: 100% !important; border-right: none !important; border-bottom: 1px solid rgba(22,22,22,0.2) !important; padding: 40px 20px !important; }
-      #faq-custom > div > div:last-child { padding: 40px 20px !important; }
+      #faq-custom > div { flex-direction: column !important; gap: 32px !important; }
+      #faq-custom > div > div { width: 100% !important; }
     }
 
     /* Esconder o header ShowIt - usando navbar custom */
