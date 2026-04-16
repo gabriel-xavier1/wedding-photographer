@@ -435,11 +435,6 @@
 
     .sib-header {
       z-index: 1000;
-      position: fixed !important;
-      top: 0 !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      width: 1200px !important;
     }
 
     /* Fundo do header cobre toda a tela */
@@ -447,12 +442,73 @@
       position: relative;
     }
 
-    .m .sib-header {
-      height: 1px;
+    /* Navbar HTML puro - centralizado e fixo */
+    #navbar-custom {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(41,38,36,0.55) 100%);
     }
+    #navbar-custom .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 107px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: relative;
+    }
+    #navbar-custom .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    #navbar-custom .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    #navbar-custom .nav-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      text-decoration: none;
+    }
+    #navbar-custom .nav-logo-text {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 43px;
+      color: rgba(255,255,255,1);
+      line-height: 1;
+      display: block;
+    }
+    #navbar-custom .nav-logo-sub {
+      font-family: 'Overpass', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      display: block;
+      margin-top: 2px;
+    }
+    #navbar-custom a.nav-link {
+      font-family: 'Overpass', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,1);
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    #navbar-custom a.nav-link:hover { opacity: 0.7; }
+    #navbar-custom a.nav-link.active { opacity: 0.7; }
 
-    .d .sib-header {
-      height: 1px;
+    /* Esconder o header ShowIt - usando navbar custom */
+    #header { display: none !important; }
     }
 
     .m .sib-header .ss-bg {
@@ -5000,7 +5056,25 @@
   <body>
     
     
-    <div id="si-sp" class="sp"><!-- <div id="hamburger-menu" data-bid="hamburger-menu" class="sb sib-hamburger-menu sb-lm sb-ld"><div class="ss-s ss-bg"><div class="sc" style="width:1200px"><div data-sid="hamburger-menu_0" class="sie-hamburger-menu_0 si-group se-pc DBz82OVM- trigger-child-hovers"><div data-sid="hamburger-menu_DBz82OVM-_0" class="sie-hamburger-menu_DBz82OVM-_0 se" data-pid="DBz82OVM-"><div class="se-simple"></div></div><div data-sid="hamburger-menu_DBz82OVM-_1" class="sie-hamburger-menu_DBz82OVM-_1 se" data-pid="DBz82OVM-"><div class="se-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="60" y="201" width="392" height="12"/><rect x="60" y="301" width="392" height="12"/></svg></div></div></div></div></div></div> --><div id="header" data-bid="header" class="sb sib-header"><div class="ss-s ss-bg"><div class="sc" style="width:1200px"><div data-sid="header_0" class="sie-header_0 se"><div class="se-simple"></div></div><a href="index.html" target="_self" class="sie-header_1 se" data-sid="header_1"><nav class="se-t sie-header_1-text st-m-subheading st-d-subheading">home</nav></a><a href="about.html" target="_self" class="sie-header_2 se" data-sid="header_2"><nav class="se-t sie-header_2-text st-m-subheading st-d-subheading">about</nav></a><a href="portfolio.html" target="_self" class="sie-header_3 se" data-sid="header_3"><nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">portfolio</nav></a><a href="#/" target="_self" class="sie-header_4 se" data-sid="header_4"><nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">services</nav></a><a href="blog.html" target="_self" class="sie-header_5 se" data-sid="header_5"><nav class="se-t sie-header_5-text st-m-subheading st-d-subheading">blog</nav></a><a href="contact.html" target="_self" class="sie-header_6 se" data-sid="header_6"><nav class="se-t sie-header_6-text st-m-subheading st-d-subheading">contact</nav></a><div class="str-id" data-tran="header_7"><div data-sid="header_7" class="sie-header_7 se"><div class="se-t sie-header_7-text st-m-heading st-d-heading se-rc"><i>italic</i><br></div></div></div><div data-sid="header_8" data-sg-link="{&quot;type&quot;:&quot;page&quot;,&quot;target&quot;:&quot;/&quot;}" class="sie-header_8 si-group sg-link-action yLJYsCWGd trigger-child-hovers"><div data-sid="header_yLJYsCWGd_0" class="sie-header_yLJYsCWGd_0 se" data-pid="yLJYsCWGd"><div class="se-t sie-header_yLJYsCWGd_0-text st-m-title st-d-title se-rc">Willow</div></div><div data-sid="header_yLJYsCWGd_1" class="sie-header_yLJYsCWGd_1 se" data-pid="yLJYsCWGd"><div class="se-t sie-header_yLJYsCWGd_1-text st-m-subheading st-d-subheading se-rc">photography</div></div></div></div></div></div><div id="hero" data-bid="hero" class="sb sib-hero">
+    <div id="si-sp" class="sp"><!-- <div id="hamburger-menu" data-bid="hamburger-menu" class="sb sib-hamburger-menu sb-lm sb-ld"><div class="ss-s ss-bg"><div class="sc" style="width:1200px"><div data-sid="hamburger-menu_0" class="sie-hamburger-menu_0 si-group se-pc DBz82OVM- trigger-child-hovers"><div data-sid="hamburger-menu_DBz82OVM-_0" class="sie-hamburger-menu_DBz82OVM-_0 se" data-pid="DBz82OVM-"><div class="se-simple"></div></div><div data-sid="hamburger-menu_DBz82OVM-_1" class="sie-hamburger-menu_DBz82OVM-_1 se" data-pid="DBz82OVM-"><div class="se-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="60" y="201" width="392" height="12"/><rect x="60" y="301" width="392" height="12"/></svg></div></div></div></div></div></div> --><div id="header" data-bid="header" class="sb sib-header"><div class="ss-s ss-bg"><div class="sc" style="width:1200px"><div data-sid="header_0" class="sie-header_0 se"><div class="se-simple"></div></div><a href="index.html" target="_self" class="sie-header_1 se" data-sid="header_1"><nav class="se-t sie-header_1-text st-m-subheading st-d-subheading">home</nav></a><a href="about.html" target="_self" class="sie-header_2 se" data-sid="header_2"><nav class="se-t sie-header_2-text st-m-subheading st-d-subheading">about</nav></a><a href="portfolio.html" target="_self" class="sie-header_3 se" data-sid="header_3"><nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">portfolio</nav></a><a href="#/" target="_self" class="sie-header_4 se" data-sid="header_4"><nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">services</nav></a><a href="blog.html" target="_self" class="sie-header_5 se" data-sid="header_5"><nav class="se-t sie-header_5-text st-m-subheading st-d-subheading">blog</nav></a><a href="contact.html" target="_self" class="sie-header_6 se" data-sid="header_6"><nav class="se-t sie-header_6-text st-m-subheading st-d-subheading">contact</nav></a><div class="str-id" data-tran="header_7"><div data-sid="header_7" class="sie-header_7 se"><div class="se-t sie-header_7-text st-m-heading st-d-heading se-rc"><i>italic</i><br></div></div></div><div data-sid="header_8" data-sg-link="{&quot;type&quot;:&quot;page&quot;,&quot;target&quot;:&quot;/&quot;}" class="sie-header_8 si-group sg-link-action yLJYsCWGd trigger-child-hovers"><div data-sid="header_yLJYsCWGd_0" class="sie-header_yLJYsCWGd_0 se" data-pid="yLJYsCWGd"><div class="se-t sie-header_yLJYsCWGd_0-text st-m-title st-d-title se-rc">Willow</div></div><div data-sid="header_yLJYsCWGd_1" class="sie-header_yLJYsCWGd_1 se" data-pid="yLJYsCWGd"><div class="se-t sie-header_yLJYsCWGd_1-text st-m-subheading st-d-subheading se-rc">photography</div></div></div></div></div></div><nav id="navbar-custom">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="#/" class="nav-link active">Services</a>
+        </div>
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-text">Willow</span>
+          <span class="nav-logo-sub">photography</span>
+        </a>
+        <div class="nav-right">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div id="hero" data-bid="hero" class="sb sib-hero">
       <div class="ss-s ss-bg">
         <div class="sb-m ssp-d"></div>
         <div class="sc" style="width:1200px">
