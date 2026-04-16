@@ -563,11 +563,37 @@
       /* Intro-custom - stack vertically */
       #intro-custom { padding: 48px 20px !important; }
       #intro-custom > div { max-width: 100% !important; }
-      #intro-custom > div > div[style*="display:flex"] { flex-direction: column !important; gap: 24px !important; }
-      #intro-custom > div > div > div[style*="flex:0 0 260px"] { flex: unset !important; width: 100% !important; height: 280px !important; }
-      #intro-custom > div > div > div[style*="flex:1"] { padding: 0 !important; }
-      #intro-custom > div > div > div[style*="flex:0 0 240px"] { flex: unset !important; width: 100% !important; flex-direction: row !important; }
-      #intro-custom > div > div > div[style*="flex:0 0 240px"] > div { flex: 1 !important; height: 180px !important; }
+      #intro-custom > div > div[style*="display:flex;align-items:flex-start"] {
+        flex-direction: column !important;
+        gap: 24px !important;
+      }
+      /* Left photo - full width */
+      #intro-custom > div > div > div[style*="flex:0 0 260px"] {
+        flex: unset !important;
+        width: 100% !important;
+        height: 260px !important;
+      }
+      /* Centre text - no side padding */
+      #intro-custom > div > div > div[style*="flex:1"] {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      /* Centre bottom photo - full width */
+      #intro-custom > div > div > div[style*="flex:1"] > div[style*="width:300px"] {
+        width: 100% !important;
+        height: 220px !important;
+      }
+      /* Right column - full width, row layout */
+      #intro-custom > div > div > div[style*="flex:0 0 240px"] {
+        flex: unset !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+      }
+      #intro-custom > div > div > div[style*="flex:0 0 240px"] > div {
+        flex: 1 !important;
+        height: 160px !important;
+      }
 
       /* FAQ */
       #faq-custom { padding: 48px 20px !important; }
@@ -5328,8 +5354,14 @@
   @media (max-width:860px) {
     .pkg-section { flex-direction:column !important; padding:60px 24px; min-height:unset; }
     .pkg__photo, .pkg__info { flex:unset; width:100%; }
-    .polaroid img { height:300px; }
+    .polaroid img { height:280px; }
     .pkg-price-block { text-align:left; }
+    .pkg-section--lover .polaroid img { height:280px; }
+    .pkg-section--mine .polaroid img { height:280px; }
+    .pkg-section--ours .polaroid img { height:280px; }
+    .pkg-section--lover { padding:60px 24px; }
+    .pkg-section--mine { padding:60px 24px; }
+    .pkg-section--ours { padding:60px 24px; }
   }
 </style>
 
