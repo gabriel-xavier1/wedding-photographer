@@ -1410,6 +1410,43 @@
 
 /* ===== TABLET: About section only (768px - 1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  /* ===== GLOBAL: Fix horizontal scroll and container width ===== */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  /* Force Showit main container to fill viewport */
+  #si-sp, .sp {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  /* Force all Showit section blocks to fill viewport */
+  .sb {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+  /* Force all .sc containers (inline width:1200px) to viewport width */
+  .sc {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  /* ===== HEADER: Logo only, centered ===== */
+  /* Hide nav links, show only logo */
+  .d .sie-header_1, .d .sie-header_2, .d .sie-header_3,
+  .d .sie-header_4, .d .sie-header_5, .d .sie-header_6 {
+    display: none !important;
+  }
+  /* Center logo */
+  .d .sie-header_8 {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 200px !important;
+  }
+
   /* "Hi! am Jacque" title - reduce font so it doesn't overflow */
   .journey-testimonial .journey-editorial__breath {
     font-size: clamp(38px, 5.5vw, 65px) !important;
