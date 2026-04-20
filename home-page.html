@@ -2,7 +2,7 @@
   <html class="d" lang="">
     <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=1024" />
       <title>Journey</title>
         <link rel="preconnect" href="https://static.showit.co" />
       
@@ -24,6 +24,17 @@
   </script>
       <script src="//lib.showit.co/widgets/sliding-gallery/2.0.4/gallery.js">
   </script>		
+      <!-- TEMP: force desktop layout for tablet testing -->
+      <script>
+        (function() {
+          // Force html class to 'd' (desktop) and prevent Showit from switching to mobile
+          document.documentElement.className = document.documentElement.className.replace(/\bm\b/, 'd');
+          // Override innerWidth so Showit always sees desktop width
+          try {
+            Object.defineProperty(window, 'innerWidth', { get: function() { return 1200; }, configurable: true });
+          } catch(e) {}
+        })();
+      </script>
       <script src="//lib.showit.co/engine/2.8.0/showit-lib.min.js">
   </script>
       <script src="//lib.showit.co/engine/2.8.0/showit.min.js">
