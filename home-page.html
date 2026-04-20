@@ -1534,14 +1534,26 @@
   .d .sib-index-manual-posts { height: calc(94vw + 320px) !important; }
   /* Text size - slightly larger */
   .journey-testimonial-2__text {
-    font-size: clamp(18px, 2.2vw, 26px) !important;
+    font-size: clamp(14px, 1.7vw, 20px) !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
   }
   .journey-testimonial-2__wedding-heading {
-    font-size: clamp(32px, 4.5vw, 56px) !important;
+    font-size: clamp(26px, 3.5vw, 48px) !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+  }
+  .journey-testimonial-2__quote {
+    overflow: hidden !important;
+    min-width: 0 !important;
+    max-width: 44vw !important;
+    flex-shrink: 1 !important;
   }
   /* Gap between text and photo */
   .journey-testimonial-2__inner {
     gap: 80px !important;
+    overflow: hidden !important;
   }
   /* Button - compact, not full width */
   .journey-testimonial-2__cta-wrap {
