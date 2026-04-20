@@ -1092,7 +1092,7 @@
     /* Tablet: fix parallax and container overflow */
     @media (min-width: 768px) and (max-width: 1024px) {
       .d .sib-hero .ss-bg {
-        background-attachment: scroll !important;
+        background-attachment: fixed !important;
       }
       .d .sib-hero .sc {
         width: 100vw !important;
@@ -1103,6 +1103,8 @@
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 90vw !important;
+        top: 50% !important;
+        margin-top: -60px !important;
         text-align: center !important;
       }
       .d .sie-hero_0-text {
@@ -1110,13 +1112,7 @@
         font-size: clamp(28px, 5vw, 70px) !important;
       }
       .d .sie-hero_1 {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 90vw !important;
-        text-align: center !important;
-      }
-      .d .sie-hero_1-text {
-        text-align: center !important;
+        display: none !important;
       }
     }
 
