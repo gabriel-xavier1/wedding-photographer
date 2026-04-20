@@ -1347,9 +1347,15 @@
                                 </script>
       
     <style id="gl-editor-styles">
+/* Block zoom and horizontal scroll */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  touch-action: pan-y !important;
+}
 /* Disable zoom on images and all elements */
 img, * {
-  touch-action: pan-x pan-y;
+  touch-action: pan-y;
   -webkit-user-select: none;
   user-select: none;
 }
