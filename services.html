@@ -525,21 +525,27 @@
       #intro-custom .intro-right { flex: 0 0 180px !important; }
     }
 
-    /* TABLET only (768-1024px): collage scaled down, desktop layout preserved */
+    /* TABLET only (768-1024px): collage uses mobile grid layout */
     @media (min-width: 768px) and (max-width: 1024px) {
       #collage-intro {
         padding: 60px 3vw !important;
       }
-      /* Scale the collage container to fit viewport */
       #collage-intro > div:last-child {
+        position: relative !important;
+        height: auto !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
         max-width: 100% !important;
-        height: 320px !important;
-        transform: none !important;
       }
-      /* Scale all absolute-positioned photos proportionally */
       #collage-intro > div:last-child > div {
-        transform: scale(0.72);
-        transform-origin: top left;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        height: 220px !important;
+        transform: none !important;
       }
     }
 
