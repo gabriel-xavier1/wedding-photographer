@@ -1347,6 +1347,15 @@
                                 </script>
       
     <style id="gl-editor-styles">
+/* Disable zoom on images and all elements */
+img, * {
+  touch-action: pan-x pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  pointer-events: none;
+}
 .gl-1 {
   padding-bottom: 0px; padding-left: 0px;
 }
@@ -1735,6 +1744,15 @@
     document.addEventListener('gesturestart', function(e) {
       e.preventDefault();
     });
+    /* Prevent double-tap zoom */
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function(e) {
+      var now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, { passive: false });
   </script>
 </head>
     <body>
