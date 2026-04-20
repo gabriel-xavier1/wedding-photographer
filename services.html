@@ -1089,6 +1089,25 @@
       display: none !important;
     }
 
+    /* Tablet: fix parallax and container overflow */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .d .sib-hero .ss-bg {
+        background-attachment: scroll !important;
+      }
+      .d .sib-hero .sc {
+        width: 100vw !important;
+        max-width: 100vw !important;
+      }
+      .d .sie-hero_0 {
+        left: 5vw !important;
+        width: 90vw !important;
+      }
+      .d .sie-hero_1 {
+        left: 5vw !important;
+        width: 90vw !important;
+      }
+    }
+
     .d .sie-hero_0 {
       left: 200px;
       top: 300px;
