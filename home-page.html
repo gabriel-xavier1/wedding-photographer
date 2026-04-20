@@ -1735,24 +1735,36 @@ img {
 }
 </style>
   <script>
-    /* Prevent pinch-zoom on iOS Safari */
-    document.addEventListener('touchmove', function(e) {
-      if (e.touches.length > 1) {
-        e.preventDefault();
-      }
-    }, { passive: false });
-    document.addEventListener('gesturestart', function(e) {
-      e.preventDefault();
-    });
-    /* Prevent double-tap zoom */
-    var lastTouchEnd = 0;
-    document.addEventListener('touchend', function(e) {
-      var now = Date.now();
-      if (now - lastTouchEnd <= 300) {
-        e.preventDefault();
-      }
-      lastTouchEnd = now;
-    }, { passive: false });
+    /* ── BLOCK ALL ZOOM ─────────────────────────────────────────── */
+    (function() {
+      /* 1. Pinch zoom — touchmove with 2+ fingers */
+      document.addEventListener('touchmove', function(e) {
+        if (e.touches.length > 1) { e.preventDefault(); }
+      }, { passive: false });
+
+      /* 2. Gesture events (Safari) */
+      document.addEventListener('gesturestart', function(e) { e.preventDefault(); }, { passive: false });
+      document.addEventListener('gesturechange', function(e) { e.preventDefault(); }, { passive: false });
+      document.addEventListener('gestureend', function(e) { e.preventDefault(); }, { passive: false });
+
+      /* 3. Double-tap zoom */
+      var lastTap = 0;
+      document.addEventListener('touchend', function(e) {
+        var now = Date.now();
+        if (now - lastTap < 300) { e.preventDefault(); }
+        lastTap = now;
+      }, { passive: false });
+
+      /* 4. Keyboard zoom (Ctrl/Cmd + +/-/scroll) */
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+          e.preventDefault();
+        }
+      });
+      document.addEventListener('wheel', function(e) {
+        if (e.ctrlKey) { e.preventDefault(); }
+      }, { passive: false });
+    })();
   </script>
 </head>
     <body>
