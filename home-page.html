@@ -1407,6 +1407,32 @@
 .d .sie-testimonials_r-y19MSMR_1 svg {
   transform: rotate(180deg) !important;
 }
+
+/* ===== TABLET: About section only (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* "Hi! am Jacque" title - reduce font so it doesn't overflow */
+  .journey-testimonial .journey-editorial__breath {
+    font-size: clamp(38px, 5.5vw, 65px) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow: hidden !important;
+  }
+  /* Body text - slightly smaller to fit column */
+  .journey-testimonial__text {
+    font-size: clamp(16px, 2vw, 24px) !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  /* Prevent the quote column from overflowing viewport */
+  .journey-testimonial__quote {
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  /* Prevent the whole section from overflowing */
+  .journey-testimonial {
+    overflow: hidden !important;
+  }
+}
 </style>
 </head>
     <body>
