@@ -907,8 +907,8 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-editorial__aside {padding-top:86px;}
 .journey-editorial__breath {margin:0;color:rgba(255,255,255,0.97);font-family:'Allura';font-size:72px;font-weight:400;line-height:0.96;text-align:left;white-space:nowrap;letter-spacing:0.01em;}
 .journey-editorial__line {position:relative;width:348px;height:20px;margin-top:8px;opacity:0.96;}
-.journey-editorial__line::before {content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(255,255,255,0.92);transform:translateY(-50%);}
-.journey-editorial__line::after {content:'→';position:absolute;right:-1px;top:50%;color:rgba(255,255,255,0.96);font-family:'Instrument Sans';font-size:28px;line-height:1;transform:translateY(-50%);}
+.journey-editorial__line::before {content:'';position:absolute;left:0;right:10px;top:50%;height:2px;background:rgba(255,255,255,0.92);transform:translateY(-50%);}
+.journey-editorial__line::after {content:'';position:absolute;right:0;top:50%;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:11px solid rgba(255,255,255,0.92);transform:translateY(-50%);}
 .journey-editorial__main {max-width:820px;padding-left:28px;border-left:1px solid rgba(255,255,255,0.12);text-align:left;}
 .journey-editorial__title {margin:0 0 26px;color:rgba(255,255,255,0.98);font-family:'Instrument Serif';font-size:44px;font-weight:400;line-height:1.08;letter-spacing:-0.012em;}
 .journey-editorial__body {margin:0 0 28px;max-width:740px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:24px;font-weight:400;line-height:1.58;letter-spacing:-0.003em;}
@@ -930,8 +930,8 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-gallery-4__title {margin:0 0 14px;color:#1e1c1a;font-family:'Instrument Serif';font-size:46px;font-weight:400;line-height:1.08;letter-spacing:-0.01em;}
 .journey-gallery-4__copy {margin:0;color:#4a443f;font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.46;}
 .journey-gallery-4__grid {display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:20px;}
-.journey-gallery-4__item {margin:0;overflow:hidden;background:#dfd9d2;aspect-ratio:4 / 5;}
-.journey-gallery-4__photo {display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms ease;}
+.journey-gallery-4__item {margin:0;overflow:hidden;background:#dfd9d2;aspect-ratio:3/2;}
+.journey-gallery-4__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 420ms ease;}
 .journey-gallery-4__item:hover .journey-gallery-4__photo {transform:scale(1.03);}
 
 .journey-gallery-5 {position:relative;overflow:hidden;background:#3d3936 url('https://static.showit.co/1600/LTbtQkvO-rmLKVir2xgy-w/135701/andres-molina-odkvacxp6ui-unsplash.jpg') center 36% / cover no-repeat;padding:90px 32px 100px;}
@@ -970,8 +970,8 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-family__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
 .journey-family__para:last-child {margin-bottom:0;}
 .journey-family__grid {display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:20px;}
-.journey-family__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:4 / 5;}
-.journey-family__photo {display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms ease;}
+.journey-family__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;}
+.journey-family__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 420ms ease;}
 .journey-family__item:hover .journey-family__photo {transform:scale(1.03);}
 
 .journey-testimonial-4 {background:#ececeb;padding:86px 32px 92px;}
@@ -993,8 +993,8 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-portraits__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
 .journey-portraits__para:last-child {margin-bottom:0;}
 .journey-portraits__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-.journey-portraits__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:4/5;}
-.journey-portraits__photo {display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms ease;}
+.journey-portraits__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;}
+.journey-portraits__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 420ms ease;}
 .journey-portraits__item:hover .journey-portraits__photo {transform:scale(1.03);}
 
 .journey-testimonial-5 {background:#ececeb;padding:86px 32px 92px;}
@@ -1016,8 +1016,8 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-party__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
 .journey-party__para:last-child {margin-bottom:0;}
 .journey-party__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:4/5;}
-.journey-party__photo {display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms ease;}
+.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;}
+.journey-party__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 420ms ease;}
 .journey-party__item:hover .journey-party__photo {transform:scale(1.03);}
 
 .journey-now {background:#2f2c26;padding:74px 32px 68px;}
@@ -1377,22 +1377,22 @@ html.d {background-color:rgba(255,255,255,1);}
 </header>
 <div class="journey-gallery-4__grid">
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Couple embracing outdoors during wedding portraits"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/FzggSBtK/Ada-Joshua-44.jpg" alt="Couple embracing outdoors during wedding portraits"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/sarka_joe.png" alt="Sarka and Joe sharing a quiet wedding moment"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/GtJJD50n/Bathany-Luke-74.jpg" alt="Sarka and Joe sharing a quiet wedding moment"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Wedding portrait with warm natural light"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/wMccNGKm/Sarka-Joe-52.jpg" alt="Bride and groom walking together on their wedding day"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/sarka_joe.png" alt="Black and white style portrait of the couple"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/tJHNYHMm/Lynn-Sandie-181.jpg" alt="Black and white style portrait of the couple"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Bride and groom walking together on their wedding day"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/SRT3BrdV/Amy-Loise-Simon-176.jpg" alt="Wedding portrait with warm natural light"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/sarka_joe.png" alt="Couple portrait with candid expressions"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/D0ddGMVb/Taylor-Paul-133.jpg" alt="Couple portrait with candid expressions"/>
 </figure>
 </div>
 </div>
@@ -1421,22 +1421,22 @@ html.d {background-color:rgba(255,255,255,1);}
 
 <div class="journey-gallery-4__grid">
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/herni-grahan.png" alt="Herni and Graham during the celebration"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/VvxQS58y/Bethany-Jordan-192.jpg" alt="Herni and Graham during the celebration"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Wedding portrait with warm light"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/MHMJKVg9/Ian-Chunkin-195.jpg" alt="Wedding portrait with warm light"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/sarka_joe.png" alt="Sarka and Joe sharing a moment"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/J0fVytLD/Michelle-Lewis-119.jpg" alt="Couple details from the wedding day"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Couple details from the wedding day"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/x8wDkq2m/Mr-Mrs-Scobell-76.jpg" alt="Herni and Graham portrait in traditional attire"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/herni-grahan.png" alt="Herni and Graham portrait in traditional attire"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/fyGn3kNZ/Kate-Tom-287.jpg" alt="Kate and Tom wedding portrait"/>
 </figure>
 <figure class="journey-gallery-4__item">
-<img class="journey-gallery-4__photo" src="images/sarka_joe.png" alt="Documentary-style couple portrait"/>
+<img class="journey-gallery-4__photo" src="https://i.postimg.cc/SQ3p11zr/Sarah-Carl-108.jpg" alt="Documentary-style couple portrait"/>
 </figure>
 </div>
 </div>
@@ -1514,22 +1514,22 @@ html.d {background-color:rgba(255,255,255,1);}
 </div>
 <div class="journey-portraits__grid">
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Couple portrait during their wedding day"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/Nfq14Ybk/Eden-Tristan-908.jpg" alt="Natural portrait in golden light"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/sarka_joe.png" alt="Natural portrait in golden light"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/mDK7KG4L/Ema-Alex-311.jpg" alt="Joyful portrait of newlyweds"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Joyful portrait of newlyweds"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/NjG2J0XJ/Charlotte-Lewis-550.jpg" alt="Couple portrait during their wedding day"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/sarka_joe.png" alt="Couple walking together during portrait session"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/cL1t9J3V/Libby-Connor-238.jpg" alt="Candid moment between husband and wife"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Candid moment between husband and wife"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/g2cLS0hy/Katie-Sam-285.jpg" alt="Couple walking together during portrait session"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="images/sarka_joe.png" alt="Romantic portrait with soft natural light"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/YS9g9Sq3/Lydia-Matt-391.jpg" alt="Romantic portrait with soft natural light"/>
 </figure>
 </div>
 </div>
@@ -1562,22 +1562,22 @@ html.d {background-color:rgba(255,255,255,1);}
 </div>
 <div class="journey-party__grid">
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Joyful wedding reception moment"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/T1T4LmyB/Abbie-Lee-1476.jpg" alt="Joyful wedding reception moment"/>
 </figure>
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/sarka_joe.png" alt="Guests celebrating at the wedding reception"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/P5CFwdqK/Amber-Max-574.jpg" alt="Guests celebrating at the wedding reception"/>
 </figure>
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Dance floor energy at the reception"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/8PPYTRgj/Clair-Christian-898.jpg" alt="Dance floor energy at the reception"/>
 </figure>
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/sarka_joe.png" alt="Toasts and laughter during the reception"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/VLGVvJzD/Laura-Allan-1368.jpg" alt="Toasts and laughter during the reception"/>
 </figure>
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/Chloe_Loius_366_2048x1365.jpg" alt="Candid photograph of family and friends"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/MpnrQzGg/Lymara-Jake-1289.jpg" alt="Candid photograph of family and friends"/>
 </figure>
 <figure class="journey-party__item">
-<img class="journey-party__photo" src="images/sarka_joe.png" alt="Couple sharing their first dance"/>
+<img class="journey-party__photo" src="https://i.postimg.cc/QM54fS1B/The-Kowalski-835.jpg" alt="Couple sharing their first dance"/>
 </figure>
 </div>
 </div>
