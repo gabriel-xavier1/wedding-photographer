@@ -166,7 +166,7 @@ html.d {background-color:rgba(255,255,255,1);}
 .d .sie-header_7-text {color:rgba(0,0,0,0);font-size:10px;text-align:center;font-family:'Instrument Serif';font-weight:;font-style:italic;}
 .m .sie-header_7-text {color:rgba(0,0,0,0);font-size:28px;text-align:center;font-family:'Instrument Serif';font-weight:;font-style:italic;}
 .d .sie-header_8 {left:416px;top:20px;width:368px;height:74px;background-image:url('https://images-pw.pixieset.com/profile/783083/4660b3aebb60a41abcadc0f362c6ffb9e622b004abae483035fe06cab98d1cb3.png') !important;background-size:contain !important;background-repeat:no-repeat !important;background-position:center center !important;}
-.m .sie-header_8 {left:0px;top:12px;width:320px;height:50px;background-image:url('https://images-pw.pixieset.com/profile/783083/4660b3aebb60a41abcadc0f362c6ffb9e622b004abae483035fe06cab98d1cb3.png') !important;background-size:contain !important;background-repeat:no-repeat !important;background-position:center center !important;}
+.m .sie-header_8 {left:0px;top:12px;width:320px;height:50px;background-image:url('https://images-pw.pixieset.com/profile/783083/4660b3aebb60a41abcadc0f362c6ffb9e622b004abae483035fe06cab98d1cb3.png') !important;background-size:contain !important;background-repeat:no-repeat !important;background-position:center center !important;display:none !important;}
 
 .d .sie-header_yLJYsCWGd_0 {left:39px;top:0px;width:290px;height:52px;}
 .m .sie-header_yLJYsCWGd_0 {left:0px;top:0px;width:239px;height:30px;}
@@ -1026,6 +1026,36 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-now__text {margin:0 auto;max-width:980px;color:rgba(255,255,255,0.9);font-family:'Instrument Sans';font-size:28px;font-weight:400;line-height:1.52;letter-spacing:0;}
 
 @media (max-width: 1024px) {
+  /* Hero tablet — corrige largura fixa de 1200px */
+  .sib-hero, .sib-header, .sib-hamburger-menu {max-width:100% !important;overflow:hidden !important;}
+  .d .sib-hero .sc, .d .sib-header .sc {width:100% !important;}
+  .d .sib-hero {height:600px !important;}
+
+  /* Navbar tablet — logo centralizada, links visíveis */
+  .d .sie-header_8 {left:50% !important;transform:translateX(-50%) !important;width:220px !important;height:52px !important;top:14px !important;}
+  .d .sie-header_1 {left:16px !important;}
+  .d .sie-header_2 {left:90px !important;}
+  .d .sie-header_4 {left:170px !important;}
+  .d .sie-header_family {left:252px !important;}
+  .d .sie-header_3, .d .sie-header_5, .d .sie-header_6 {display:none !important;}
+
+  /* Hero text tablet */
+  .d .sie-hero_0 {left:32px !important;top:180px !important;width:500px !important;}
+  .d .sie-hero_0-text {font-size:58px !important;}
+  .d .sie-hero_1 {left:32px !important;top:258px !important;width:460px !important;}
+  .d .sie-hero_1-text {font-size:110px !important;}
+  .d .sie-hero_2 {left:32px !important;top:400px !important;width:380px !important;}
+
+  /* Editorial tablet */
+  .journey-editorial {padding:72px 28px 80px;}
+  .journey-editorial__inner {max-width:100%;}
+  .journey-editorial__grid {grid-template-columns:1fr 1.2fr;gap:40px;}
+  .journey-editorial__breath {font-size:54px;white-space:normal;line-height:0.98;}
+  .journey-editorial__line {width:min(280px, 100%);}
+  .journey-editorial__title {font-size:36px;}
+  .journey-editorial__body {font-size:20px;}
+  .journey-editorial__closing {font-size:26px;}
+
   .journey-testimonial {padding:70px 24px 76px;}
   .journey-testimonial__inner {grid-template-columns:minmax(0, 1.08fr) minmax(0, 0.92fr);gap:36px;}
   .journey-testimonial__mark {font-size:46px;margin-bottom:8px;}
